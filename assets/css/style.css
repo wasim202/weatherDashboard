@@ -1,0 +1,21 @@
+#header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+#line {
+  width: 12%;
+  text-align: left;
+  margin-left: 0;
+}
+
+#day-time {
+  display: flexbox;
+  align-items: baseline;
+  text-align: end;
+}
+.history {
+  background-color: gray;
+}
