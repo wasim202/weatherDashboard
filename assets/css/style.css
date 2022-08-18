@@ -1,12 +1,12 @@
 #header {
-  background-color: blue;
+  background-color: dodgerblue;
   color: white;
   text-align: center;
   align-items: center;
 }
 
 #line {
-  width: 12%;
+  width: 15%;
   text-align: left;
   margin-left: 0;
 }
@@ -17,5 +17,10 @@
   text-align: end;
 }
 .history {
-  background-color: gray;
+  background-color: antiquewhite;
+}
+
+.list-group-item {
+  background-color: lightslategrey;
+  text-align: center;
 }
