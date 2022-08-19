@@ -91,7 +91,7 @@ var runFetch = function () {
       temp5.text("temp: " + data.data[4].temp + " celsius");
       wind5.text("wind: " + data.data[4].wind_spd + " kmph");
       humidity5.text("humidity: " + data.data[4].rh + "%");
-
+      $("#card-section").show();
       //  }
     });
 };
@@ -130,7 +130,7 @@ var handleSearchClick = function (event) {
 };
 
 searchBtnEl.on("click", handleSearchClick);
-//$("#card-section").hide();
+$("#card-section").hide();
 $(function () {
   $("#history-list").sortable({
     placeholder: "ui-state-highlight",

@@ -11,6 +11,10 @@
   margin-left: 0;
 }
 
+#forcast {
+  border: 3px solid black;
+}
+
 #day-time {
   display: flexbox;
   align-items: baseline;
