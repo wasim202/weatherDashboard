@@ -49,7 +49,7 @@ var runFetch = function () {
       cityName.text(data.data[0].city_name);
       temp.text("temp: " + data.data[0].temp + " celsius");
       wind.text("wind: " + data.data[0].wind_spd + " kmph");
-      humidity.text("humidity: " + data.data[0].precip + "%");
+      humidity.text("humidity: " + data.data[0].rh + "%");
       uv.text("UV Index: " + data.data[0].uv);
       //}
     });
@@ -69,28 +69,28 @@ var runFetch = function () {
       //date1.text(moment().format("MMM Do YYYY"));
       temp1.text("temp: " + data.data[0].temp + " celsius");
       wind1.text("wind: " + data.data[0].wind_spd + " kmph");
-      humidity1.text("humidity: " + data.data[0].precip + "%");
+      humidity1.text("humidity: " + data.data[0].rh + "%");
 
       //date2.text(moment().format("MMM Do YYYY"));
       date2.text(data.data[1].datetime);
       temp2.text("temp: " + data.data[1].temp + " celsius");
       wind2.text("wind: " + data.data[1].wind_spd + " kmph");
-      humidity2.text("humidity: " + data.data[1].precip + "%");
+      humidity2.text("humidity: " + data.data[1].rh + "%");
 
       date3.text(data.data[2].datetime);
       temp3.text("temp: " + data.data[2].temp + " celsius");
       wind3.text("wind: " + data.data[2].wind_spd + " kmph");
-      humidity3.text("humidity: " + data.data[2].precip + "%");
+      humidity3.text("humidity: " + data.data[2].rh + "%");
 
       date4.text(data.data[3].datetime);
       temp4.text("temp: " + data.data[3].temp + " celsius");
       wind4.text("wind: " + data.data[3].wind_spd + " kmph");
-      humidity4.text("humidity: " + data.data[3].precip + "%");
+      humidity4.text("humidity: " + data.data[3].rh + "%");
 
       date5.text(data.data[4].datetime);
       temp5.text("temp: " + data.data[4].temp + " celsius");
       wind5.text("wind: " + data.data[4].wind_spd + " kmph");
-      humidity5.text("humidity: " + data.data[4].precip + "%");
+      humidity5.text("humidity: " + data.data[4].rh + "%");
 
       //  }
     });
@@ -130,7 +130,7 @@ var handleSearchClick = function (event) {
 };
 
 searchBtnEl.on("click", handleSearchClick);
-
+//$("#card-section").hide();
 $(function () {
   $("#history-list").sortable({
     placeholder: "ui-state-highlight",
