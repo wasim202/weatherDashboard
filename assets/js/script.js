@@ -1,5 +1,6 @@
 //var cityEl = "denver";
 var cityName = $("#city-name");
+var icon = $("#icon");
 var temp = $("#temp");
 var wind = $("#wind");
 var humidity = $("#humidity");
@@ -39,7 +40,7 @@ var runFetch = function () {
       "&key=436627ee4fdb426bac05bc9393319814"
   )
     .then(function (response) {
-      //console.log(response);
+      console.log(response);
       return response.json();
     })
     .then(function (data) {
@@ -47,6 +48,10 @@ var runFetch = function () {
       //for (var i = 0; i < data.length; i++) {
 
       cityName.text(data.data[0].city_name);
+      // var iconcode = data.data[0].weather.code;
+      // var iconUrl = "http://openweathermap.org/img/wn/${icon}.png";
+
+      // icon.attr("src", iconUrl);
       temp.text("temp: " + data.data[0].temp + " celsius");
       wind.text("wind: " + data.data[0].wind_spd + " kmph");
       humidity.text("humidity: " + data.data[0].rh + "%");
@@ -94,6 +99,15 @@ var runFetch = function () {
       $("#card-section").show();
       //  }
     });
+  fetch(
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+      cityEl +
+      "&appid=" +
+      ec485387bf797030b1808247d1c50ca3
+  ).then(function (response) {
+    return response.json();
+    console.log(response);
+  });
 };
 
 var today = moment();
