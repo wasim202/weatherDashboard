@@ -167,6 +167,9 @@ var inputEl = $("#text");
 var historyEl = $("#history-list");
 var searchBtnEl = $("#btn");
 
+var history = localStorage.getItem("history");
+history = historyEl.val();
+
 var printHistory = function (city) {
   var listEl = $("<li>");
   var cityEl = city;
@@ -194,6 +197,7 @@ var handleSearchClick = function (event) {
 };
 
 searchBtnEl.on("click", handleSearchClick);
+localStorage.setItem("history", history);
 $("#card-section").hide();
 $(function () {
   $("#history-list").sortable({
