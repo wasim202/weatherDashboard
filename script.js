@@ -1,3 +1,4 @@
+var historyArray = [];
 //var cityEl = "denver";
 var cityName = $("#city-name");
 var icon = $("#icon");
@@ -167,9 +168,6 @@ var inputEl = $("#text");
 var historyEl = $("#history-list");
 var searchBtnEl = $("#btn");
 
-var history = localStorage.getItem("history");
-history = historyEl.val();
-
 var printHistory = function (city) {
   var listEl = $("<li>");
   var cityEl = city;
@@ -177,6 +175,8 @@ var printHistory = function (city) {
   listEl.appendTo(historyEl);
 };
 
+// var history = localStorage.getItem("history");
+// history = historyEl.val();
 var handleSearchClick = function (event) {
   event.preventDefault();
 
@@ -189,7 +189,8 @@ var handleSearchClick = function (event) {
   //console.log(cityEl);
 
   printHistory(searchInput);
-
+  historyArray.push(searchInput);
+  localStorage.setItem("history", JSON.stringify(historyArray));
   // run fetch
   runFetch();
 
@@ -197,7 +198,7 @@ var handleSearchClick = function (event) {
 };
 
 searchBtnEl.on("click", handleSearchClick);
-localStorage.setItem("history", history);
+
 $("#card-section").hide();
 $(function () {
   $("#history-list").sortable({
